@@ -39,16 +39,19 @@
             bottom: -70px;
             left: calc(50% - 30px);
         }
-        .row:after{
+
+        .row:after {
             bottom: 10px;
             font-size: 2rem;
         }
-        .row{
-            display: flex; 
-            position: relative;           
+
+        .row {
+            display: flex;
+            position: relative;
         }
-        .row .block{
-           margin: 0 10px 70px;   
+
+        .row .block {
+            margin: 0 10px 70px;
         }
     </style>
 </head>
@@ -56,20 +59,8 @@
 <body>
     <div class="container-flex">
         <div class="oval block">Начало</div>
-        <div class="pryamougolnik block">Создать переменные и присвоить им значения</div>
-        <div class="pryamougolnik block">Проверить переменную $Why</div>
-        <div class="row">
-            <div class="column">
-                <div class="pryamougolnik block">Если истина</div>
-                <div class="pryamougolnik block">сформировать условие на истину перменной $Why и истину других переменных высчитать площадь </div>
-                <div class="pryamougolnik block">Вывести на экран</div>
-            </div>
-            <div class="column">
-                <div class="pryamougolnik block">Если ложь</div>
-                <div class="pryamougolnik block">сформировать условие на ложь перменной $Why и истину других переменных, высчитать периметр </div>
-                <div class="pryamougolnik block">Вывести на экран</div>
-            </div>
-        </div>        
+        <div class="pryamougolnik block">если вторая цифра pass1 более 5, то шифр р1.р2.р3</div>
+        <div class="pryamougolnik block">если вторая цифра pass1 менее 5, то шифр р2.р3.р1</div>        
         <div class="oval block">Конец</div>
     </div>
 </body>
