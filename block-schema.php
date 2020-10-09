@@ -61,12 +61,12 @@
         <div class="row">
             <div class="column">
                 <div class="pryamougolnik block">Если истина</div>
-                <div class="pryamougolnik block">сформировать условие на истину перменной $Why высчитать площадь </div>
+                <div class="pryamougolnik block">сформировать условие на истину перменной $Why и истину других переменных высчитать площадь </div>
                 <div class="pryamougolnik block">Вывести на экран</div>
             </div>
             <div class="column">
                 <div class="pryamougolnik block">Если ложь</div>
-                <div class="pryamougolnik block">сформировать условие на ложь перменной $Why, высчитать периметр </div>
+                <div class="pryamougolnik block">сформировать условие на ложь перменной $Why и истину других переменных, высчитать периметр </div>
                 <div class="pryamougolnik block">Вывести на экран</div>
             </div>
         </div>        
