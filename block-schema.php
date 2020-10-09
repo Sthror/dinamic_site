@@ -59,8 +59,10 @@
 <body>
     <div class="container-flex">
         <div class="oval block">Начало</div>
-        <div class="pryamougolnik block">если вторая цифра pass1 более 5, то шифр р1.р2.р3</div>
-        <div class="pryamougolnik block">если вторая цифра pass1 менее 5, то шифр р2.р3.р1</div>        
+        <div class="pryamougolnik block">через условие изменяеи тип данных на целочисленное</div>
+        <div class="pryamougolnik block">получаем сумму</div>        
+        <div class="pryamougolnik block">если сумма до 9 включительно - одноразрядное</div>        
+        <div class="pryamougolnik block">выводим сообщение и сумму</div>        
         <div class="oval block">Конец</div>
     </div>
 </body>
