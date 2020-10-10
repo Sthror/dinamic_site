@@ -439,20 +439,19 @@ echo "Hello world!";
 В программе использовать оператор % ($a % $b - целочисленный остаток от деления $a на $b).
 */
 
-    $price = 10050; // переменная, клоторая хранит  цену
-    $val = ($price)*0.13 + $price;    
-    if(($val*10)%10 !== 0){
-       $val1 = $val%10;
-       echo "<br>$val1<br>";
-    }    
-    $price = $val*100;
+    $price = 101060; // переменная, клоторая хранит  цену
+    $val = ($price) * 0.13 + $price; // увеличиваем сумму на 13 %
+    if (($val * 10) % 10 !== 0) { // если есть дробное число
+        $val1 = $val * 10000 % 10000; // получаем значение после ","
+        $val2 = (($val * 10000 - $val1) / 10000) + 1;  // округляем в большую сторону     
+    }
 
-    $kopeiki = ($price % 100)/100; // получаем копейки
-    $rubli = $price - $kopeiki; // получаем рубли
+    $kopeiki = $val2 % 100; // получаем копейки
+    $rubli = ($val2 - $kopeiki) / 100; // получаем рубли
 
-    if ($rubli % 10 == 1) {
+    if ($rubli % 10 == 1) { // меняем название
         $rub = 'рубль';
-    } else if ($rubli % 10 == 2 || $rubli % 10 == 3 || $rubli % 10 == 4) {
+    } else if (($rubli % 10 == 2 || $rubli % 10 == 3 || $rubli % 10 == 4) && !($rubli % 100 < 21 || $rubli % 100 > 11)) {
         $rub = 'рубля';
     } else {
         $rub = 'рублей';
@@ -466,8 +465,8 @@ echo "Hello world!";
         $kop = 'копеек';
     }
 
-    echo "$rubli $rub $kopeiki $kop. <br>";
-    echo "$rubli.$kopeiki руб.";
+    echo "$rubli $rub $kopeiki $kop. <br>"; // выводим цену
+    echo "$rubli.$kopeiki руб."; // выводим цену
 
 
     /*
@@ -478,6 +477,44 @@ echo "Hello world!";
 Пользователь программы вводит на входе $IP = '123.123.123.123' или $IP = 3232235777, программа должна определить какого вида IP ввел пользователь и показать альтернативную запись.
 Для обработки адреса с "точкой" использовать функцию substr() - возвращает подстроку строки string длиной length, начинающегося с start символа по счету)
 */
+
+    $IP = '192.168.1.1';
+
+    $itaration = true;
+    $i = 0;
+    $part = "";
+    $decodeIP = 0;
+    $x = 3;
+    if (substr($IP, 3, 1) !== '.') {
+        $IP4 = true;
+        echo "уже переведено";
+    }
+    while ($itaration && !$IP4) {
+        if ($x == 3) {
+            $multi = 256 * 256 * 256;
+        } else if ($x == 2) {
+            $multi = 256 * 256;
+        } else if ($x == 1) {
+            $multi = 256;
+        } else {
+            $multi = 1;
+        }
+        $simbol = substr($IP, $i, 1);
+        if ($simbol != '.') {
+            $part .= $simbol;
+        } else {
+            $decodeIP += $part * $multi;
+            $x--;
+            $part = '';
+        }
+        if (!$simbol) {
+            $itaration = false;
+        }
+        $i++;
+    }
+    echo "<br>$decodeIP<br>";
+
+
     ?>
 
 </body>
