@@ -171,26 +171,26 @@ echo "<p>" . $arr[$lang][$day - 1] . "</p>";
 Использовать рекурсивный вызов функции.
 */
 
-$password = '0646464';
-hackOneSimbol ($password);
-function hackOneSimbol ($pass){
-	static $hack_pass;	
+$password = '06';
+hackOneSimbol($password);
+function hackOneSimbol($pass)
+{
+	static $hack_pass;
 	static $wordPass;
-	if (is_string($pass)){
+	if (is_string($pass)) {
 		$wordPass = $pass;
 		$pass = strlen($pass);
 	}
 	for ($i = 0; $i < 10; $i++) {
-		if($pass > 0){			
+		if ($pass > 0) {
 			$hack_pass[$pass] = $i;
-			hackOneSimbol ($pass-1);
-		} 
+			hackOneSimbol($pass - 1);
+		}
 	}
 	if (implode("", $hack_pass) == $wordPass) {
-		echo "Взломали пароль - это: ".implode("", $hack_pass)."<br>";	
-		exit;
+		echo "Взломали пароль - это: " . implode("", $hack_pass) . "<br>";
 	}
-} 
+}
 
 
 
@@ -200,14 +200,20 @@ function hackOneSimbol ($pass){
 */
 
 function printWords($word, $x, $y)
-{ // cоздали функцию с тремя параметрами
-
+{ // функция вывода на экран
+	$word = math($x, $y); //вызов функции сложения
+	echo $word; // выводим на экран
 }
 
 function math($first, $second)
-{ //создали функцию math с двумя параметрами
-
+{ // функция сложения двух чисел
+	$summa = $first + $second; //получаем сумму 2 аргументов
+	return $summa; //возвращаем сумму кк значение всей функции
 }
+$x = 12; //параметр 1
+$y = 35; // параметр 2
+
+printWords($sum, $x, $y); // выводим на экран результат сложения
 
 
 
@@ -218,6 +224,25 @@ function math($first, $second)
 Значения для демонстрации расчетов задать самостоятельно.
 */
 
+$arr = [
+	'1-й клиент' => [1, 2, 3, 5, -9, 1],
+	'2-й клиент' => [1, 2, -4, 5, -1, 8],
+	'3-й клиент' => [1, 8, 3, 5, 29, -5],
+	'4-й клиент' => [1, 2, -3, 5, 3, 10],
+];
+foreach ($arr as $klient => $value) {
+	$sum = 0;
+	foreach ($value as $transaction) {
+		$sum += $transaction;
+	}
+	$debet[$klient] = $sum;
+	unset($sum);
+}
+asort($debet);
+foreach ($debet as $name => $value) {
+	echo "$name имеет $value<br>";
+}
+
 
 
 /*
@@ -225,9 +250,29 @@ function math($first, $second)
 Диапазон передается в функцию в качестве массива(пример такого диапазона: $range = [1,50]). 
 Так же вывести на экран отдельным блоком все составные числа (не простые).
 */
-
+$range = [1,50];
+searchSimpleNumbers($range);
 function searchSimpleNumbers($range)
 {
+	$n =  $range[1]; //до какого числа искать
+	$arSimpleNubers = array(1, 2, 3); //начальное массив с простыми числами
+	for ($i = 4; $i <= $n; $i++) { // перебираем число от 4 до n
+		$control = 0; //это контрольная переменная если ниже не изменится, то будет добавлено простое число в начальный массив простых чисел
+		for ($int = 1; $int < count($arSimpleNubers); $int++) { // перебираем все простые числа в нашем массиве простых чисел
+			if ($arSimpleNubers[$int] !== $i && $i % $arSimpleNubers[$int] == 0) { // получаем модальное деление числа на все имеющеюся простые чила
+				$control = 1; //переменная изменена, это не простое число
+				$arNotSimpleNubers[] = $i;
+				continue;
+			}
+			if ($arSimpleNubers[$int] * $arSimpleNubers[$int] > $i) { // не имеет смысла делить по модулю на простое число, которое больше квадратного корня от проверяемого значения $i
+				continue;
+			}
+		}
+		if ($control == 0) {
+			$arSimpleNubers[] = $i;	//получили простое число, добавляем в массив
+		}
+	}
+	?><pre><?php print_r($arSimpleNubers);?></pre><pre><?php print_r($arNotSimpleNubers);?></pre><?php
 }
 
 
@@ -239,6 +284,9 @@ function searchSimpleNumbers($range)
 
 
 
+
+
 /*
 3b. Продемонстрировать результат ошибок всех типов ломая свой скрипт (fatal, error, notice и deprecated).
 */
+
