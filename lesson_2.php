@@ -283,7 +283,9 @@ function searchSimpleNumbers($range)
 3a. Сделать настройки вашего php которые позволят выводить на экран ошибки уровня notice и deprecated.
 */
 
-
+error_reporting(E_NOTICE | E_DEPRECATED);
+error_reporting(-1);
+ini_set('display_errors', 'On');
 
 
 
@@ -291,3 +293,10 @@ function searchSimpleNumbers($range)
 3b. Продемонстрировать результат ошибок всех типов ломая свой скрипт (fatal, error, notice и deprecated).
 */
 
+// require_once("несуществующий файл"); // e_error
+$arr = [1,2];
+// $arr[2]; // e_notice
+
+// $a = echo "нет точки с запятой" // e_parse
+
+// ereg() // deprecated
