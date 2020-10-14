@@ -1,522 +1,909 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <?php
-
-    /*
-Задание 1: разместить строчки кода ниже и вызвать в браузере ваш первый php-скрипт:
-echo "Hello world!";
-*/
-
-    echo "Hello world!";
-
-    /*
-Задание 2: Повторить весь код из роликов раздела "Материалы на обучение"
-*/
-
-    //Изучение PHP для начинающих | Урок #3 - Пишем "Hello World!"
-
-    echo "Hello World!<br />"; // вывод текста
-    echo "Hello world!"; // вывод текста
-    echo "русский текст"; // вывод текста
-
-
-
-    //Изучение PHP для начинающих | Урок #4 - Комментарии в PHP
-
-    echo "Hi!"; // Эта строчка выводит Hi!
-    /*
-        комментарий №1
-        комментарий №2
-        комментарий №3
-    */
-    echo "Hi!"; # Эта строчка выводит Hi!
-
-
-    //Изучение PHP для начинающих | Урок #5 - Переменные и их типы
-
-    $myNumber = 45; // переменная с типом данных "целое число"
-    $float = -3.25; // переменная с типом данных "число с плавающей точкой"
-    $string = "Hello world!"; // переменная с типом данных "строка"
-    $bool = true; // переменная с типом данных "булево значение"
-
-    echo "переменная myNumber - $myNumber"; // вывод переменной
-    echo "<br />"; // выводим тег переноса каретки
-    echo "переменная float - $float"; // вывод переменной
-    echo "<br />"; // выводим тег переноса каретки
-    echo "переменная string - $string"; // вывод переменной
-    echo "<br />"; // выводим тег переноса каретки
-    echo "переменная bool - $bool"; // вывод переменной
-    echo "<br />"; // выводим тег переноса каретки
-    $myNumber = 12; // меняем значение переменной
-    echo "переменная myNumber - $myNumber"; // вывод переменной
-
-
-
-    //Изучение PHP для начинающих | Урок #6 - Константы
-
-    echo PHP_VERSION; // выводим константу PHP_VERSION
-    define("PI", 3.14); // создаем новую константу PI
-    echo "<br />"; // выводим тег переноса каретки
-    echo PI; // выводим константу PI
-    echo "<br />"; // выводим тег переноса каретки
-    echo defined("PI"); // проверяем существование константы
-
-
-
-
-    //Изучение PHP для начинающих | Урок #7 - Арифметические операции
-
-    $x = 32; // создаем переменную $x
-    $y = 22.13; // создаем переменную $y
-    $summ = $x + $y; // операция сложения
-    $diff = $x - $y; // операция вычитания
-    $mult = $x * $y; // операция умножения
-    $dil = $x / $y; // операция деления
-
-    echo "Сумма из $x и $y = $summ<br />"; // выводим результат операции
-    echo "Разница из $x и $y = $diff<br />"; // выводим результат операции
-    echo "Умножение из $x и $y = $mult<br />"; // выводим результат операции
-    echo "Деление из $x и $y = $dil<br />"; // выводим результат операции
-
-    $z = 12; // создаем переменную $z
-    $ostatok = $x % $z; // создаем переменную $ostatok? кладем в значение остаток от деления переменных
-
-    echo "Остаток при делении из $x и $z = $ostatok<br />"; // выводим результат операции
-
-    $q = 400; // создаем переменную $q
-    $q /= 10; // создаем переменную $q, делим эту же переменную на 10
-    echo $q; // выводим значение переменной
-    echo "<br />"; // выводим тег переноса каретки
-    $q = $q + 1; //увеличиваем эту же переменную на 1
-    $q += 1; //увеличиваем эту же переменную на 1
-    $q++; //увеличиваем эту же переменную на 1
-    $q--; //уменьшаем эту же переменную на 1
-    echo $q; // выводим значение переменной
-
-
-
-    //Изучение PHP для начинающих | Урок #8 - Строковые операции
-
-    $str_1 = "<b>Первая строка</b> <input type=\"text\" />"; // объявляем переменную $str_1
-    $str_2 = "<i>Вторая строка</i>"; // объявляем переменную $str_2
-
-    echo $str_1 . " " . $str_2 . " \" \\"; // выводим конкатенацию переменных $str_1 и $str_2, разделяем их пробелом, в конце добавляем двойные кавычки и обратный слеш,
-
-    echo ' \' '; // выводим одинарную кавычку
-
-
-
-    //Изучение PHP для начинающих | Урок #9 - Логические операции
-
-    $x = 12; // создаем переменную $x
-    $y = 34; // создаем переменную $y 
-    $z = 4.25; // создаем переменную $z 
-
-    $bool_1 = $x != $z; // переменная с типом данных "булево значение", истина
-    $bool_2 = $x <= $y; // переменная с типом данных "булево значение", истина 
-
-    echo $bool_1 . "<br />" . $bool_2 . "<hr />"; // выводим значений переменных
-
-    $bool_3 = !($x == $y); // переменная с типом данных "булево значение", истина
-    $bool_4 = $x == $y || $z < $y; // переменная с типом данных "булево значение", истина
-    $bool_5 = $z != $y && $x < $y; // переменная с типом данных "булево значение", истина
-    $bool_6 = $z != $x ^ $y < $z; // переменная с типом данных "булево значение", истина
-
-    echo "<br />" . $bool_3 . "<br />" . $bool_4 . "<br />" . $bool_5 . "<br />" . $bool_6; // выводим значений переменных    
-
-    $bool = !($x != $y && $z < $x) || $x != $y; // переменная с типом данных "булево значение", истина
-
-    echo "<br/>$bool = !($x != $y && $z < $x) || $x != $y"; // выводим значение переменных
-
-
-
-    //Изучение PHP для начинающих | Урок #10 - Оператор эквивалентности
-
-    $string = "Example"; // объявляем переменную
-    $num = 0; // объявляем переменную
-
-    $bool_1 = $string == true; // объявляем переменную
-    echo "$bool_1 = $string == true;"; // выводим значение переменных
-
-    $bool_2 = $num == ""; // объявляем переменную
-    echo "$bool_2 = $num == \"\";<hr/>"; // выводим значение переменных
-
-    $bool_3 = $string === true; // объявляем переменную
-    echo "$bool_3 = $string === true;"; // выводим значение переменных
-
-    $bool_4 = $num === ""; // объявляем переменную
-    echo "$bool_2 = $num === \"\";"; // выводим значение переменных
-
-
-
-    //Изучение PHP для начинающих | Урок #11 - Условные операторы
-
-    $x = 12; // создаем переменную $x
-    $y = 34; // создаем переменную $y 
-
-    if ($x == $y && $x != 12 && $y == 5 && ($x + 5) == 15) // условие
-        echo 'Ура!'; // выводим результат
-    else if ($x == 15 || $y != 7) { // если первое условие ложно
-        $num = 5;
-        echo  "Число № " . $num; // выводим результат
-    } else { // если все вышестоящие условия ложны
-        echo "<br/>"; // выводим тег переноса каретки
-        echo 'Все сработало!'; // выводим результат
-    }
-
-    if ($x == $y && $x != 12 && $y == 5 && ($x + 5) == 15) // условие без вариантов
-        echo 'Ура!'; // выводим результат
-
-    $x == $y ? $string = "Да" : $string = "Нет"; // краткая запись условия if...else...
-    echo "<br/>" . $string; // выводим результат
-
-
-
-    //Изучение PHP для начинающих | Урок #13 - Циклы For, While и Do While
-
-    for ($i = 100; $i >= 80; $i -= 2) { // цикл от 100 до 81, шагом в 2
-        if ($i % 5 == 0) continue; // если делится на 5 без остатка продолжить цикл не выполняя текущую итерацию
-        if ($i <= 87) break; // если меньше или равно 87 полностью остановить цикл, текущая итерация не выполнится
-        echo "Цикл под номером № $i<br/>"; // выводим результат 
-    }
-
-    echo "<br/>"; // выводим тег переноса каретки
-    $x = 1; // создаем переменную $x
-
-    while ($x <= 10) { // цикл, пока $x меньше или равен 10
-        echo "Итерация под номером № $x<br/>"; // выводим результат 
-        if ($x == 7) // условие $x равен 7 ?
-            for ($y = 0; $y < 5; $y += 3) // цикл от 0 до 4 шагом 3
-                echo "Еще одна итерация - $y<br/>";  // выводим результат           
-        $x++; // прибавляем на 1
-    }
-
-    $z = 10; // создаем переменную $z
-    echo "<br/>"; // выводим тег переноса каретки
-
-    do { // сделать до тех пор пока условие ниже не будет ложно
-        echo "Операция выполнилась только один раз"; // выводим результат 
-        $z++; // прибавляем на 1
-    } while ($z < 5); // условие для скрипта выше, если ложно скрипт выполнится только один раз
-
-
-
-    /*
-Задание 3: Задачи на написания линейных алгоритмов. Необходимо сделать/нарисовать сначала блок-схему, затем воспроизвести блок-схему в коде на php.
-3a. Посчитать и вывести на экран чему равен периметр четырехугольника. Дано сторона a=5, сторона b=3, сторона c=5, сторона d=11.
-*/
-
-    $a = 5; // сторона a
-    $b = 3;  // сторона b
-    $c = 5;  // сторона c
-    $d = 1; // сторона d
-    $perimetr =  $a + $b + $c + $d; // высчитываю периметр      
-    echo "<p>Периметр равен $perimetr !</p>"; // вывожу результат
-
-
-    /*
-3b. посчитать и вывести на экран значение S. Дано S = (a + b)^2, a = 7x, b=21x, x = ½
-*/
-
-    $x = 0.5;  // переменная x
-    $a = 7 * $x; //переменная a
-    $b = 21 * $x;  //переменная b
-
-    $val = ($a + $b) * ($a + $b); // высчитываем значение
-    echo "<p>S равно $val !</p>"; // вывожу результат
-
-
-    /*
-Задание 4: Задачи на написание вариативных алгоритмов (if...else)
-4a. Посчитать площадь трапеции если переменная $Why заданная пользователем в начале сценария истина и периметр трапеции если эта переменная ложь. Значения необходимые для расчета площади и периметра задайте самостоятельно.
-*/
-
-    $Why = true; // переменная для расчета
-    $a = 5; // сторона a
-    $b = 7;  // сторона b
-    $c = 3;  // сторона c
-    $d = 3; // сторона d
-    $m = 3; // высота
-    $h = 3; // средняя линия
-
-    if ($Why == true) {
-        $S = $m * $h; // высчитываю площадь
-        echo "Площадь трапеции равна $S"; // вывожу результат
-
-    } else {
-        $perimetr =  $a + $b + $c + $d; // высчитываю периметр      
-        echo "<p>Периметр равен $perimetr !</p>"; // вывожу результат
-    }
-
-
-    /*
-4b. Доработать предыдущую задачу добавив проверку корректности вводимых данных пользователем. Если данные введены некорректно, то сообщить об этом и не производить расчеты.
-Подсказка: для проверки корректности вводимых данных, рекомендуется сравнить введенное значение и вычисленное значение высоты.
-*/
-
-    $Why = true; // переменная для расчета
-    $a = 5; // сторона a
-    $b = 7;  // сторона b
-    $c = 3;  // сторона c
-    $d = 3; // сторона d
-    $m = 3; // высота
-    $h = 3; // средняя линия
-
-    if ($Why == true && $m != false && $h != false) { // проверка на пустое значение, так же можно проверить на тип данных "число", но в рамках этого занятия пока не возможно, в материалах этого не указано
-        $S = $m * $h; // высчитываю площадь
-        echo "Площадь трапеции равна $S"; // вывожу результат
-
-    } else if ($Why == false && $a != false && $b != false && $c != false && $d != false) { // проверка на пустое значение, так же можно проверить на тип данных "число", но в рамках этого занятия пока не возможно, в материалах этого не указано
-        $perimetr =  $a + $b + $c + $d; // высчитываю периметр      
-        echo "<p>Периметр равен $perimetr !</p>"; // вывожу результат
-    }
-
-
-
-    /*
-Задание 5: Задачи на написание алгоритмов с циклами (for, while)
-5a. В задаче будем использовать функцию rand() она из заданного диапазона значений выбирает одно случайное.
-Необходимо определить пессимист компьютер или оптимист.
-Пусть $computer = rand(0,1). Если $computer выбирает 0, то он пессимист, если выбирает 1, то он оптимист.
-Выполнить опрос компьютера 100 раз и вывести на экран по итогу всех этих итераций вывод - пессимист этот компьютер сегодня/сейчас или оптимист.
-Подсказка: не нужно выводить 100 раз пессимист/оптимист, а нужен итог с цифрами, типа на 55% оптимист.
-*/
-
-    $cont = 100; // 100% оптимист ))
-    for ($i = 1; $i < 100; $i++) { // счетчик 100 итераций
-        $computer = rand(0, 1); // рандомное число
-        if ($computer == 0) { // если компьютер в этот раз пессимист
-            $cont--;  // убавляем пессимизм на 1 %  
-        }
-    }
-
-    if ($cont > 50) { //если все же более половины случаев выпала 1
-        echo "наш компьютер оптимист на $cont%"; // выводим кол-во оптимизма
-    } else if ($cont == 50) { // если 0 выпал столько же сколько и 1
-        echo "наш компьютер не определился"; // комп играет в русскую рулетку
-    } else { // если 0 выпал больше чем 1
-        $cont = 100 - $cont; // высчитываем кол-во пессимизма
-        echo "наш компьютер пессимист на $cont%"; // выводим
-    }
-
-
-    /*
-5b. В переменной $password хранится шестизначный пароль, состоящий только из цифр, например 302390.
-Необходимо написать программу которая методом перебора найдет пароль.
-Подсказка: 012345 - тоже вариант пароля.
-*/
-    $password = '000110';
-    for ($i_6 = 0; $i_6 < 10; $i_6++) {
-        for ($i_5 = 0; $i_5 < 10; $i_5++) {
-            for ($i_4 = 0; $i_4 < 10; $i_4++) {
-                for ($i_3 = 0; $i_3 < 10; $i_3++) {
-                    for ($i_2 = 0; $i_2 < 10; $i_2++) {
-                        for ($i = 0; $i < 10; $i++) {
-                            $hack_pass = $i_6 . $i_5 . $i_4 . $i_3 . $i_2 . $i;
-                            if ($hack_pass == $password) {
-                                echo "Взломали пароль - это: $hack_pass";
-                                break;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-
-    /*
-5c. В переменных $pass1 и $pass2 хранятся трехзначные пароли.
-Мы уже подобрали пароль $pass1, например он равен 436.
-Пароль $pass2 удалось получить только в зашифрованном виде $pass2Se.
-Мы узнали что шифр был сделан по следующему правилу - если "вторая цифра из $pass1" больше 5, то $pass2 = "цифра первого разряда из $pass2Se" . "число второго разряда из $pass2Se" . "число третьего разряда из $pass2Se", а если "второе число из $pass1" меньше либо равно 5, то $pass2 = "цифра второго разряда из $pass2Se" . "цифра третьего разряда из $pass2Se" . "цифра первого разряда из $pass2Se".
-Вывести на экран $pass2 и описание правила по которому этот пароль был расшифрован из $pass2Se.
-Значение для переменной $pass2Se задайте на своё усмотрение.
-*/
-
-    $pass1 = 436; // первая переменная 
-    $pass2Se = 456; // вторая (неизвестная) переменная
-    $key = (($pass2Se % 100) - ($pass2Se % 10)) / 10; // второй разряд pass1
-    $razryad_1 = $pass2Se % 10; // первый разряд
-    $razryad_2 = (($pass2Se % 100) - ($pass2Se % 10)) / 10; // второй разряд
-    $razryad_3 = $pass2Se - ($pass2Se % 100) / 100; // третий разряд
-    if ($key > 5) { // если второй разряд больше 5
-        $pass2 = $razryad_1 . $razryad_2 . $razryad_3; // получаем пароль
-    } else { // в иных случаях
-        $pass2 = $razryad_2 . $razryad_3 . $razryad_1; // получаем пароль
-    }
-
-
-    /*
-5d. Для предыдущей задачи написать алгоритм шифрования пароля $pass2
-*/
-
-    $pass2 = 456;
-    $razryad_1 = $pass2 % 10; // первый разряд
-    $razryad_2 = (($pass2 % 100) - ($pass2 % 10)) / 10; // второй разряд
-    $razryad_3 = $pass2 - ($pass2 % 100) / 100; // третий разряд
-
-    if ($key > 5) { // если второй разряд больше 5
-        $pass2Se = $razryad_1 . $razryad_2 . $razryad_3; // шифруем
-    } else { // если третий разряд меньше 5 и  второй разряд меньше пяти
-        $pass2Se = $razryad_2 . $razryad_3 . $razryad_1; // шифруем
-    }
-
-
-
-    /*
-Задание 6: Задачи на выбор типов данных
-6a. Даны два одноразрядных числа заданных с помощью слов (например $a='семь' и b='четыре').
-Вывести на экран, в виде числа, результат сложения этих цифр.
-Проверить результат сложения на разрядность, если разрядность больше 1, то вывести сообщение "большое число", иначе вывести сообщение "маленькое число".
-*/
-
-    $a = 'семь'; // задаем $a
-    $b = 'четыре'; // задаем $b
-
-    if ($a == 'один') { // изменяем тип данных на число
-        $a = 1;
-    } else if ($a == 'два') {
-        $a = 2;
-    } else if ($a == 'три') {
-        $a = 3;
-    } else if ($a == 'четыре') {
-        $a = 4;
-    } else if ($a == 'пять') {
-        $a = 5;
-    } else if ($a == 'шесть') {
-        $a = 6;
-    } else if ($a == 'семь') {
-        $a = 7;
-    } else if ($a == 'восемь') {
-        $a = 8;
-    } else if ($a == 'девять') {
-        $a = 9;
-    }
-
-    if ($b == 'один') { // изменяем тип данных на число
-        $b = 1;
-    } else if ($b == 'два') {
-        $b = 2;
-    } else if ($b == 'три') {
-        $b = 3;
-    } else if ($b == 'четыре') {
-        $b = 4;
-    } else if ($b == 'пять') {
-        $b = 5;
-    } else if ($b == 'шесть') {
-        $b = 6;
-    } else if ($b == 'семь') {
-        $b = 7;
-    } else if ($b == 'восемь') {
-        $b = 8;
-    } else if ($b == 'девять') {
-        $b = 9;
-    }
-
-    $sum =  $b +  $a; // сумма
-
-    if ($sum < 10) { // сумма одноразрядное
-        echo "$sum - маленькое число";
-    } else { // если нет
-        echo "$sum - большое число";
-    }
-
-
-
-    /*
-6b. Предположим у нас в программе цены хранятся в виде целых чисел, но фактически - два последних разряда числа обозначают копейки.
-Например, цена товара хранится в виде 10050, это значит что товар стоит 100 рублей 50 копеек.
-Написать программу которая выведет на экран цену в двух форматах "N рубл[ей/я] M копе[ек/ки]." и "N.M руб." увеличив при этом цену товара на 13 процентов.
-В программе использовать оператор % ($a % $b - целочисленный остаток от деления $a на $b).
-*/
-
-    $price = 101060; // переменная, клоторая хранит  цену
-    $val = ($price) * 0.13 + $price; // увеличиваем сумму на 13 %
-    if (($val * 10) % 10 !== 0) { // если есть дробное число
-        $val1 = $val * 10000 % 10000; // получаем значение после ","
-        $val2 = (($val * 10000 - $val1) / 10000) + 1;  // округляем в большую сторону     
-    }
-
-    $kopeiki = $val2 % 100; // получаем копейки
-    $rubli = ($val2 - $kopeiki) / 100; // получаем рубли
-
-    if ($rubli % 10 == 1) { // меняем название
-        $rub = 'рубль';
-    } else if (($rubli % 10 == 2 || $rubli % 10 == 3 || $rubli % 10 == 4) && !($rubli % 100 < 21 || $rubli % 100 > 11)) {
-        $rub = 'рубля';
-    } else {
-        $rub = 'рублей';
-    }
-
-    if ($kopeiki % 10 == 1) {
-        $kop = 'копейка';
-    } else if ($kopeiki % 10 == 2 || $kopeiki % 10 == 3 || $kopeiki % 10 == 4) {
-        $kop = 'копейки';
-    } else {
-        $kop = 'копеек';
-    }
-
-    echo "$rubli $rub $kopeiki $kop. <br>"; // выводим цену
-    echo "$rubli.$kopeiki руб."; // выводим цену
-
-
-    /*
-6c. Как известно, при переводе IP-адреса компьютера в число, мы экономим ресурсы памяти, так как IP-адрес в четвертой версии — это 32-х битовое число и запись в строчном виде 192.168.1.1 будет занимать 15 байт, а в числовом виде всего 4 байта.
-При этом удобной формой записи является запись в виде четырёх десятичных чисел значением от 0 до 255, разделённых точками, например, 192.0.2.60. но для хранения его в базе данных лучше перевести его в десятичное целое число.
-Например 192.168.1.1 — это одно и то же, что 3232235777.
-Алгоритм перевода строковой записи IP4 в числовую такой X = Y1 * 256 ^ 0 + Y2 * 256 ^ 1 + Y3 * 256 ^ 2 + Y4 * 256 ^3 (где ip адрес имеет формат Y4.Y3.Y2.Y1) Написать перевести алгоритм в php-код.
-Пользователь программы вводит на входе $IP = '123.123.123.123' или $IP = 3232235777, программа должна определить какого вида IP ввел пользователь и показать альтернативную запись.
-Для обработки адреса с "точкой" использовать функцию substr() - возвращает подстроку строки string длиной length, начинающегося с start символа по счету)
-*/
-
-    $IP = '192.168.1.1';
-
-    $itaration = true;
-    $i = 0;
-    $part = "";
-    $decodeIP = 0;
-    $x = 3;
-    if (substr($IP, 3, 1) !== '.') {
-        $IP4 = true;
-        echo "уже переведено";
-    }
-    while ($itaration && !$IP4) {
-        if ($x == 3) {
-            $multi = 256 * 256 * 256;
-        } else if ($x == 2) {
-            $multi = 256 * 256;
-        } else if ($x == 1) {
-            $multi = 256;
-        } else {
-            $multi = 1;
-        }
-        $simbol = substr($IP, $i, 1);
-        if ($simbol != '.') {
-            $part .= $simbol;
-        } else {
-            $decodeIP += $part * $multi;
-            $x--;
-            $part = '';
-        }
-        if (!$simbol) {
-            $itaration = false;
-        }
-        $i++;
-    }
-    echo "<br>$decodeIP<br>";
-
-
-    ?>
-
-</body>
-
+<html lang="ru">
+  <head>
+    <title>home page</title>
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f461f187-b614-45c4-988e-6b214fceb781&amp;lang=ru_RU" type="text/javascript"></script></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css">
+    <link rel="stylesheet" href="/assets/css/screen.css">
+  </head>
+  <body>
+    <header class="site_header">
+      <div class="header_top">
+        <div class="grid-container">
+          <div class="grid-x">
+            <div class="header_address"><i class="icon-address"></i>ул. Молодогвардейская, д. 58, стр.13, офис 28.
+              Мы работаем: Пн - Пт с 9:00 до 18:00
+            </div>
+            <div class="header_contacts"><a class="mail" href="mailto:5084145@mail.ru"><i class="icon-mail"></i>5084145@mail.ru</a>
+              <div class="header_phones"><a class="phone" href="tel:+74957985563">+7 (495) 798-55-63</a><a class="phone" href="tel:+74956418568">+7 (495) 641-85-68</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="grid-container">
+          <div class="grid-x">
+            <div class="header_logo"><a href="/">
+                <div class="logo">Бытовки-Сервис.ru</div>
+                <div class="logo_text">Аренда бытовок и блок контейнеров с 2008 г.</div></a></div>
+            <div class="header_menu">
+              <ul class="menu">
+                <li><a href="/catalog.php">Аренда бытовки</a>
+                  <ul class="submenu">
+                    <li><a href="/catalog.php">Аренда бытовок в Видном</a></li>
+                    <li><a href="/catalog.php">Аренда бытовок в Домодедово</a></li>
+                    <li><a href="/catalog.php">Аренда бытовок в Видном</a></li>
+                    <li><a href="/catalog.php">Аренда бытовок в Домодедово</a></li>
+                    <li><a href="/catalog.php">Аренда бытовок в Видном</a></li>
+                    <li><a href="/catalog.php">Аренда бытовок в Домодедово</a></li>
+                    <li><a href="/catalog.php">Аренда бытовок в Видном</a></li>
+                    <li><a href="/catalog.php">Аренда бытовок в Домодедово</a></li>
+                  </ul>
+                </li>
+                <li><a href="/price.php">Цены</a></li>
+                <li><a href="/delivery.php">Доставка</a></li>
+                <li><a href="/photogallery.php">Фотогалерея</a></li>
+                <li><a href="/contacts.php">Контакты</a></li>
+              </ul>
+              <div class="header-search"><a class="search_btn" href="#"><i class="icon-search"></i></a>
+                <form class="search_form" method="" action="">
+                  <div class="search-widget">
+                    <input type="text" placeholder="Поиск">
+                    <button class="search_btn-close" type="reset"><i class="icon-close"></i></button>
+                  </div>
+                </form>
+                <div class="search-result">
+                  <div class="search-bytovka">
+                    <div class="search-bytovka-img"><a href="#"><img src="../assets/img/search1.png"></a></div>
+                    <div class="search-bytovka-body"><a class="search-bytovka-title" href="/bytovka.php">Бытовка прорабская (офис)</a>
+                      <div class="search-bytovka-gabarits">2400 Х 6000</div>
+                    </div>
+                  </div>
+                  <ul class="search-ul">
+                    <li>прорабская <span>бытовка</span></li>
+                    <li><span>Бытовка</span>душевая</li>
+                    <li><span>бытовка для</span>зимнего проживания</li>
+                    <li><span>бытовка</span>склад</li>
+                    <li><span>бытовка для</span>строителей</li>
+                    <li><span>бытовка для</span>рабочих</li>
+                    <li><span>бытовка</span>на шосси</li>
+                    <li>вагон<span> бытовка</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="mobile_menu">
+      <div class="mobile_wrap">
+        <div class="grid-container">
+          <div class="grid-x">
+            <div class="hamburger">Меню</div><a class="phone" href="tel:+74957985563">+7 (495) 798-55-63</a>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown_menu">
+        <ul class="menu">
+          <li class="parent"><a href="/price.php">Аренда бытовки</a>
+          <ul class="submenu">
+                    <li><a href="/catalog.php">Аренда бытовок в Видном</a></li>
+                    <li><a href="/catalog.php">Аренда бытовок в Домодедово</a></li>
+                    <li><a href="/catalog.php">Аренда бытовок в Видном</a></li>
+                    <li><a href="/catalog.php">Аренда бытовок в Домодедово</a></li>
+                    <li><a href="/catalog.php">Аренда бытовок в Видном</a></li>
+                    <li><a href="/catalog.php">Аренда бытовок в Домодедово</a></li>
+                    <li><a href="/catalog.php">Аренда бытовок в Видном</a></li>
+                    <li><a href="/catalog.php">Аренда бытовок в Домодедово</a></li>
+                  </ul>
+            <div class="menu-arrows"></div>
+          </li>
+          <li><a href="/delivery.php">Цены</a></li>
+          <li><a href="/price.php">Доставка</a></li>
+          <li><a href="/photogallery.php">Фотогалерея</a></li>
+          <li><a href="/contacts.php ">Контакты</a></li>
+        </ul>
+        <div class="search">
+          <form class="search_form" method="" action="">
+            <div class="search-widget">
+              <input type="text" placeholder="Поиск">
+              <button class="search_btn-close" type="submit"><i class="icon-search"></i></button>
+            </div>
+          </form>
+        </div>
+        <div class="phones"><a class="phone" href="tel:+74957985563">+7 (495) 798-55-63</a><a class="phone" href="tel:+74956418568">+7 (495) 641-85-68</a></div>
+      </div>
+    </div>
+    <main>
+      <div class="main_slider-wrapper">
+        <div class="grid-container">
+          <div class="grid-x">
+            <div class="main_slider">
+              <div class="main_slider-item"><img src="../assets/img/bytovka1.png" alt="" title="">
+                <div class="main_slider-substrate">
+                  <div class="main_substrate-heading">Строительные бытовки недорого!</div>
+                  <div class="main_substrate-description"></div>
+                  <div class="main_substrate-button"><a class="btn_pink" href="#">Заказать<span class="show-for-mobile"> бытовку</span></a></div>
+                </div>
+              </div>
+              <div class="main_slider-item"><img src="../assets/img/bytovka2.png" alt="" title="">
+                <div class="main_slider-substrate">
+                  <div class="main_substrate-heading">Строительные бытовки недорого!</div>
+                  <div class="main_substrate-description">Компания "Бытовки-Сервис" предлагает взять в аренду бытовку для жилья</div>
+                  <div class="main_substrate-button"><a class="btn_pink" href="#">Заказать<span class="show-for-mobile"> бытовку</span></a></div>
+                </div>
+              </div>
+              <div class="main_slider-item"><img src="../assets/img/bytovka3.png" alt="" title="">
+                <div class="main_slider-substrate">
+                  <div class="main_substrate-heading">Строительные бытовки недорого!</div>
+                  <div class="main_substrate-description">Компания "Бытовки-Сервис" предлагает взять в аренду бытовку пост-охраны</div>
+                  <div class="main_substrate-button"><a class="btn_pink" href="#">Заказать<span class="show-for-mobile"> бытовку</span></a></div>
+                </div>
+              </div>
+              <div class="main_slider-item"><img src="../assets/img/bytovka4.png" alt="" title="">
+                <div class="main_slider-substrate">
+                  <div class="main_substrate-heading">Строительные бытовки недорого!</div>
+                  <div class="main_substrate-description">Компания "Бытовки-Сервис" предлагает взять в аренду бытовку под склад</div>
+                  <div class="main_substrate-button"><a class="btn_pink" href="#">Заказать<span class="show-for-mobile"> бытовку</span></a></div>
+                </div>
+              </div>
+              <div class="main_slider-item"><img src="../assets/img/bytovka5.png" alt="" title="">
+                <div class="main_slider-substrate">
+                  <div class="main_substrate-heading">Строительные бытовки недорого!</div>
+                  <div class="main_substrate-description">Компания "Бытовки-Сервис" предлагает взять в аренду офисную бытовку</div>
+                  <div class="main_substrate-button"><a class="btn_pink" href="#">Заказать<span class="show-for-mobile"> бытовку</span></a></div>
+                </div>
+              </div>
+              <div class="main_slider-item"><img src="../assets/img/bytovka6.png" alt="" title="">
+                <div class="main_slider-substrate">
+                  <div class="main_substrate-heading">Строительные бытовки недорого!</div>
+                  <div class="main_substrate-description">Компания "Бытовки-Сервис" предлагает взять в аренду бытовку-раздевалку</div>
+                  <div class="main_substrate-button"><a class="btn_pink" href="#">Заказать<span class="show-for-mobile"> бытовку</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="preview_bytovka-wrapper">
+        <div class="grid-container">
+          <div class="preview_bytovka-item">
+            <div class="preview_bytovka-main">
+              <div class="preview_bytovka-img">
+                <div class="preview_bytovka-slider"><a data-fancybox="sklad" href="../assets/img/preview1.png"><img src="../assets/img/preview1.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview2.png"><img src="../assets/img/preview2.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview3.png"><img src="../assets/img/preview3.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview4.png"><img src="../assets/img/preview4.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview5.png"><img src="../assets/img/preview5.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview6.png"><img src="../assets/img/preview6.png" alt="" title=""></a></div>
+              </div>
+              <div class="preview_bytovka-content"><a class="preview_bytovka-heading" href="#">Бытовка склад</a>
+                <div class="preview_bytovka-gabarits">2400 Х 6000</div>
+                <div class="preview_bytovka-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</div>
+                <div class="preview_bytovka-characteristics">
+                  <ul class="characteristics">
+                    <li>Отделка оргалит</li>
+                    <li>Усиленный каркас</li>
+                    <li>Стальные решетки на окнах</li>
+                    <li>Электропроводка</li>
+                    <li>Освещение</li>
+                    <li>Наружная обшивка оцинкованный профнастил</li>
+                    <li>Металлическая дверь</li>
+                    <li>Пол – доска окрашенная</li>
+                    <li>Возможность постановки бытовки на бытовку</li>
+                  </ul>
+                </div>
+                <div>Доступно для заказа в &lt; город в Предложном падеже&gt;</div>
+                <div class="preview_bytovka-order">
+                  <div class="preview_bytovka-price">Цена: <span>6000 р</span></div>
+                  <div class="preview_bytovka-link"><a class="btn_pink" href="#" data-open="popup_order">Заказать</a></div>
+                </div><a class="preview_bytovka-download" href="#" alt="" title=""></a>
+              </div>
+            </div>
+            <div class="preview_bytovka-additional">
+              <div class="preview_bytovka-additional-caption">Может дополнительно комплектоваться:</div>
+              <div class="preview_bytovka-icons"><img src="../assets/img/add-ic1.svg" alt="" title=""><img src="../assets/img/add-ic2.svg" alt="" title=""><img src="../assets/img/add-ic3.svg" alt="" title=""><img src="../assets/img/add-ic4.png" alt="" title=""><img src="../assets/img/add-ic5.svg" alt="" title=""></div>
+            </div>
+          </div>
+          <div class="preview_bytovka-item">
+            <div class="preview_bytovka-main">
+              <div class="preview_bytovka-img">
+                <div class="preview_bytovka-slider"><a data-fancybox="sklad" href="../assets/img/preview1.png"><img src="../assets/img/preview1.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview2.png"><img src="../assets/img/preview2.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview3.png"><img src="../assets/img/preview3.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview4.png"><img src="../assets/img/preview4.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview5.png"><img src="../assets/img/preview5.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview6.png"><img src="../assets/img/preview6.png" alt="" title=""></a></div>
+              </div>
+              <div class="preview_bytovka-content"><a class="preview_bytovka-heading" href="#">Бытовка склад</a>
+                <div class="preview_bytovka-gabarits">2400 Х 6000</div>
+                <div class="preview_bytovka-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</div>
+                <div class="preview_bytovka-characteristics">
+                  <ul class="characteristics">
+                    <li>Отделка оргалит</li>
+                    <li>Усиленный каркас</li>
+                    <li>Стальные решетки на окнах</li>
+                    <li>Электропроводка</li>
+                    <li>Освещение</li>
+                    <li>Наружная обшивка оцинкованный профнастил</li>
+                    <li>Металлическая дверь</li>
+                    <li>Пол – доска окрашенная</li>
+                    <li>Возможность постановки бытовки на бытовку</li>
+                  </ul>
+                </div>
+                <div>Доступно для заказа в &lt; город в Предложном падеже&gt;</div>
+                <div class="preview_bytovka-order">
+                  <div class="preview_bytovka-price">Цена: <span>6000 р</span></div>
+                  <div class="preview_bytovka-link"><a class="btn_pink" href="#" data-open="popup_order">Заказать</a></div>
+                </div><a class="preview_bytovka-download" href="#" alt="" title=""></a>
+              </div>
+            </div>
+            <div class="preview_bytovka-additional">
+              <div class="preview_bytovka-additional-caption">Может дополнительно комплектоваться:</div>
+              <div class="preview_bytovka-icons"><img src="../assets/img/add-ic1.svg" alt="" title=""><img src="../assets/img/add-ic2.svg" alt="" title=""><img src="../assets/img/add-ic3.svg" alt="" title=""><img src="../assets/img/add-ic4.png" alt="" title=""><img src="../assets/img/add-ic5.svg" alt="" title=""></div>
+            </div>
+          </div>
+          <div class="preview_bytovka-item">
+            <div class="preview_bytovka-main">
+              <div class="preview_bytovka-img">
+                <div class="preview_bytovka-slider"><a data-fancybox="sklad" href="../assets/img/preview1.png"><img src="../assets/img/preview1.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview2.png"><img src="../assets/img/preview2.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview3.png"><img src="../assets/img/preview3.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview4.png"><img src="../assets/img/preview4.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview5.png"><img src="../assets/img/preview5.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview6.png"><img src="../assets/img/preview6.png" alt="" title=""></a></div>
+              </div>
+              <div class="preview_bytovka-content"><a class="preview_bytovka-heading" href="#">Бытовка склад</a>
+                <div class="preview_bytovka-gabarits">2400 Х 6000</div>
+                <div class="preview_bytovka-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</div>
+                <div class="preview_bytovka-characteristics">
+                  <ul class="characteristics">
+                    <li>Отделка оргалит</li>
+                    <li>Усиленный каркас</li>
+                    <li>Стальные решетки на окнах</li>
+                    <li>Электропроводка</li>
+                    <li>Освещение</li>
+                    <li>Наружная обшивка оцинкованный профнастил</li>
+                    <li>Металлическая дверь</li>
+                    <li>Пол – доска окрашенная</li>
+                    <li>Возможность постановки бытовки на бытовку</li>
+                  </ul>
+                </div>
+                <div>Доступно для заказа в &lt; город в Предложном падеже&gt;</div>
+                <div class="preview_bytovka-order">
+                  <div class="preview_bytovka-price">Цена: <span>6000 р</span></div>
+                  <div class="preview_bytovka-link"><a class="btn_pink" href="#" data-open="popup_order">Заказать</a></div>
+                </div><a class="preview_bytovka-download" href="#" alt="" title=""></a>
+              </div>
+            </div>
+            <div class="preview_bytovka-additional">
+              <div class="preview_bytovka-additional-caption">Может дополнительно комплектоваться:</div>
+              <div class="preview_bytovka-icons"><img src="../assets/img/add-ic1.svg" alt="" title=""><img src="../assets/img/add-ic2.svg" alt="" title=""><img src="../assets/img/add-ic3.svg" alt="" title=""><img src="../assets/img/add-ic4.png" alt="" title=""><img src="../assets/img/add-ic5.svg" alt="" title=""></div>
+            </div>
+          </div>
+          <div class="preview_bytovka-item">
+            <div class="preview_bytovka-main">
+              <div class="preview_bytovka-img">
+                <div class="preview_bytovka-slider"><a data-fancybox="sklad" href="../assets/img/preview1.png"><img src="../assets/img/preview1.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview2.png"><img src="../assets/img/preview2.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview3.png"><img src="../assets/img/preview3.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview4.png"><img src="../assets/img/preview4.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview5.png"><img src="../assets/img/preview5.png" alt="" title=""></a><a data-fancybox="sklad" href="../assets/img/preview6.png"><img src="../assets/img/preview6.png" alt="" title=""></a></div>
+              </div>
+              <div class="preview_bytovka-content"><a class="preview_bytovka-heading" href="#">Бытовка склад</a>
+                <div class="preview_bytovka-gabarits">2400 Х 6000</div>
+                <div class="preview_bytovka-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</div>
+                <div class="preview_bytovka-characteristics">
+                  <ul class="characteristics">
+                    <li>Отделка оргалит</li>
+                    <li>Усиленный каркас</li>
+                    <li>Стальные решетки на окнах</li>
+                    <li>Электропроводка</li>
+                    <li>Освещение</li>
+                    <li>Наружная обшивка оцинкованный профнастил</li>
+                    <li>Металлическая дверь</li>
+                    <li>Пол – доска окрашенная</li>
+                    <li>Возможность постановки бытовки на бытовку</li>
+                  </ul>
+                </div>
+                <div>Доступно для заказа в &lt; город в Предложном падеже&gt;</div>
+                <div class="preview_bytovka-order">
+                  <div class="preview_bytovka-price">Цена: <span>6000 р</span></div>
+                  <div class="preview_bytovka-link"><a class="btn_pink" href="#" data-open="popup_order">Заказать</a></div>
+                </div><a class="preview_bytovka-download" href="#" alt="" title=""></a>
+              </div>
+            </div>
+            <div class="preview_bytovka-additional">
+              <div class="preview_bytovka-additional-caption">Может дополнительно комплектоваться:</div>
+              <div class="preview_bytovka-icons"><img src="../assets/img/add-ic1.svg" alt="" title=""><img src="../assets/img/add-ic2.svg" alt="" title=""><img src="../assets/img/add-ic3.svg" alt="" title=""><img src="../assets/img/add-ic4.png" alt="" title=""><img src="../assets/img/add-ic5.svg" alt="" title=""></div>
+            </div>
+          </div>
+          <div class="grid-x">
+            <div class="preview_bytovka-more"><span class="btn_blue">Показать еще</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="main_map">
+        <div class="grid-container">
+          <div class="main_map-heading heading">Мы работаем по Москве и Московской области</div>
+          <div class="main_map-wrapper">
+            <div class="main_map-body" id="map"></div>
+            <script>
+              var mapsPoints = [
+                                          {
+                                              coords: [55.5572, 37.7086],
+                                              locationUrl: '/arenda-bytovok-v-vidnom/',
+                                          },
+                                          {
+                                              coords: [55.4255, 38.2641],
+                                              locationUrl: '/arenda-bytovok-v-bronnicah/',
+                                          },
+                                          {
+                                              coords: [56.3439, 37.5203],
+                                              locationUrl: '/arenda-bytovok-v-dmitrove/',
+                                          },
+                                          {
+                                              coords: [55.5673, 38.2258],
+                                              locationUrl: '/arenda-bytovok-v-ramenskom/',
+                                          },
+                                          {
+                                              coords: [55.1499, 37.4670],
+                                              locationUrl: '/arenda-bytovok-v-chekhove/',
+                                          },
+                                          {
+                                              coords: [56.3153, 38.1360],
+                                              locationUrl: '/arenda-bytovok-v-sergiev-posade/',
+                                          },
+                                          {
+                                              coords: [56.3317, 36.7287],
+                                              locationUrl: '/arenda-bytovok-v-klinu/',
+                                          },
+                                          {
+                                              coords: [55.9143, 36.8603],
+                                              locationUrl: '/arenda-bytovok-v-istre/',
+                                          },
+                                          {
+                                              coords: [55.4312, 37.5447],
+                                              locationUrl: '/arenda-bytovok-v-podolske/',
+                                          },
+                                          {
+                                              coords: [55.4312, 37.5447],
+                                              locationUrl: '/arenda-bytovok-v-vidnom/',
+                                          },
+                                          {
+                                              coords: [56.0357, 35.9585],
+                                              locationUrl: '/arenda-bytovok-v-volokolamske/',
+                                          },
+                                          {
+                                              coords: [56.0104, 37.8472],
+                                              locationUrl: '/arenda-bytovok-v-pushkino/',
+                                          },
+                                          {
+                                              coords: [55.9919, 37.2144],
+                                              locationUrl: '/arenda-bytovok-v-zelenograde/',
+                                          },
+                                          {
+                                              coords: [55.7963, 37.9382],
+                                              locationUrl: '/arenda-bytovok-v-balashihe/',
+                                          },
+                                          {
+                                              coords: [55.9202, 37.9915],
+                                              locationUrl: '/arenda-bytovok-v-shchelkovo/',
+                                          },
+                                          {
+                                              coords: [55.8545, 38.4418],
+                                              locationUrl: '/arenda-bytovok-v-noginske/',
+                                          },
+              
+                                      ];
+            </script>
+            <div class="main_map-links">
+              <div class="main_map-links-title">Аренда бытовок в: </div><a href="/arenda-bytovok-v-vidnom/">Видном</a><a href="/arenda-bytovok-v-bronnicah/">Бронницах</a><a href="/arenda-bytovok-v-dmitrove/">Дмитрове</a><a href="/arenda-bytovok-v-ramenskom/">Раменском</a><a href="/arenda-bytovok-v-chekhove/">Чехове</a><a href="/arenda-bytovok-v-sergiev-posade/">Сергиев Посаде</a><a href="/arenda-bytovok-v-klinu/">Клину</a><a href="/arenda-bytovok-v-istre/">Истре</a><a href="/arenda-bytovok-v-podolske/">Подольске</a><a href="/arenda-bytovok-v-vidnom/">Солнечногорске</a><a href="/arenda-bytovok-v-volokolamske/">Волоколамске</a><a href="/arenda-bytovok-v-pushkino/">Пушкино</a><a href="/arenda-bytovok-v-zelenograde/">Зеленограде</a><a href="/arenda-bytovok-v-balashihe/">Балашихе</a><a href="/arenda-bytovok-v-shchelkovo/">Щелково</a><a href="/arenda-bytovok-v-noginske/">Ногинске</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rent_block">
+        <div class="grid-container">
+          <div class="rent_info">
+            <div class="rent_heading">Условия аренды блок-контейнеров с доставкой</div>
+            <div class="rent_text">Сдача блок-контейнера в аренду производится после первоначального платежа: доставка + вывоз + 3 месяц аренды. Минимальный срок - 1 месяц.</div>
+          </div>
+          <div class="grid-x">
+            <div class="rent_item entity">
+              <div class="rent_item-heading">Для юридических лиц:</div>
+              <ul class="characteristic">
+                <li>Заявка на электронную почту с указанием типа бытовка; </li>
+                <li>Карточка организации; </li>
+                <li>Доверенность от организации на получение товарно-материальных ценностей; </li>
+                <li>Оплата по безналичному расчету; </li>
+                <li>Залог не требуется!</li>
+              </ul>
+              <div class="rent_icon"></div>
+            </div>
+            <div class="rent_item individual">
+              <div class="rent_item-heading">Для физических лиц:</div>
+              <ul class="characteristic">
+                <li>Аренда блок - контейнеров без залога;</li>
+                <li>Копия паспорта с пропиской Москва или область; </li>
+                <li>Оплата по безналичному расчету или наличными.</li>
+              </ul>
+              <div class="rent_icon"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tech-characteristics">
+        <div class="grid-container">
+          <div class="tech-characteristics-heading heading">Технические характеристики бытовок</div>
+          <div class="tech-characteristics-wrapper">
+            <div class="tech-characteristics-item">
+              <div class="tech-characteristics-item-title">Стандартная бытовка</div>
+              <div class="tech-characteristics-item-body">
+                <div class="tech-characteristics-img"><img src="../assets/img/standartnaya-bytovka-texnicheskie-xarakteristiki.jpg" title="" alt=""></div>
+                <div class="tech-characteristics-item-table">
+                  <div class="tech-characteristics-item-tr">Характеристики стандартной строительной бытовки</div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Тип</div>
+                    <div class="tech-characteristics-item-td">Вход с торца</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Габариты</div>
+                    <div class="tech-characteristics-item-td">2,5 х 6 х 2,5 м</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Каркас</div>
+                    <div class="tech-characteristics-item-td">Металлический</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Окно</div>
+                    <div class="tech-characteristics-item-td">Рама деревянная (двойное остекление)</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Внешняя отделка</div>
+                    <div class="tech-characteristics-item-td">Оцинкованный профлист</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Внутренняя отделка</div>
+                    <div class="tech-characteristics-item-td">Деревянная, ПХВ вагонка, оргалит</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Напольное покрытие</div>
+                    <div class="tech-characteristics-item-td">Линолеум</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Дверь наружная</div>
+                    <div class="tech-characteristics-item-td">Деревянная (с замком, обитая жестью)</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Дверь межкомнатная</div>
+                    <div class="tech-characteristics-item-td">ДВП</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Утепление</div>
+                    <div class="tech-characteristics-item-td">Минеральная вата 50 мм.</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Электропроводка</div>
+                    <div class="tech-characteristics-item-td">Стандарт 5 КВт (2 лампы, 1 светильник, 3 розетки двойные, 2 выключателя)</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Решетка на окне</div>
+                    <div class="tech-characteristics-item-td">Есть</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tech-characteristics-item">
+              <div class="tech-characteristics-item-title">Стандартная бытовка</div>
+              <div class="tech-characteristics-item-body">
+                <div class="tech-characteristics-img"><img src="../assets/img/standartnaya-bytovka-texnicheskie-xarakteristiki2.jpg" title="" alt=""></div>
+                <div class="tech-characteristics-item-table">
+                  <div class="tech-characteristics-item-tr">Характеристики стандартной строительной бытовки</div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Тип</div>
+                    <div class="tech-characteristics-item-td">Вход с торца</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Габариты</div>
+                    <div class="tech-characteristics-item-td">2,5 х 6 х 2,5 м</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Каркас</div>
+                    <div class="tech-characteristics-item-td">Металлический</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Окно</div>
+                    <div class="tech-characteristics-item-td">Рама деревянная (двойное остекление)</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Внешняя отделка</div>
+                    <div class="tech-characteristics-item-td">Оцинкованный профлист</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Внутренняя отделка</div>
+                    <div class="tech-characteristics-item-td">Деревянная, ПХВ вагонка, оргалит</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Напольное покрытие</div>
+                    <div class="tech-characteristics-item-td">Линолеум</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Дверь наружная</div>
+                    <div class="tech-characteristics-item-td">Деревянная (с замком, обитая жестью)</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Дверь межкомнатная</div>
+                    <div class="tech-characteristics-item-td">ДВП</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Утепление</div>
+                    <div class="tech-characteristics-item-td">Минеральная вата 50 мм.</div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Электропроводка</div>
+                    <div class="tech-characteristics-item-td">Стандарт 5 КВт (2 лампы, 1 светильник, 3 розетки двойные, 2 выключателя) </div>
+                  </div>
+                  <div class="tech-characteristics-item-tr">
+                    <div class="tech-characteristics-item-td">Решетка на окне</div>
+                    <div class="tech-characteristics-item-td">Есть</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-x">
+            <div class="tech-characteristics-link"><span class="btn_blue">Показать еще</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="calculator">
+        <div class="grid-container">
+          <form class="calculator_form">
+            <div class="calculator_top">
+              <div class="calculator_heading heading">Калькулятор подбора бытовки</div>
+              <div class="calculator_wrap">
+                <div class="calculator_block">
+                  <select class="select">
+                    <option></option>
+                    <option value="storage">Бытовка склад</option>
+                    <option value="office">Бытовка прорабская (офис)</option>
+                    <option value="living">Бытовка жилая</option>
+                    <option value="security">Бытовка пост охрана</option>
+                  </select>
+                </div>
+                <div class="calculator_block">
+                  <div class="calculator_input">
+                    <label class="input"><span>Количество:</span>
+                      <input class="number" type="text" name="count">
+                    </label>
+                  </div>
+                  <div class="calculator_input">
+                    <label class="input"><span>Срок аренды:<span>(мес)</span></span>
+                      <input class="number" type="text" name="rent">
+                    </label>
+                  </div>
+                </div>
+                <div class="calculator_block pay">
+                  <label class="radio">
+                    <input type="radio" name="pay">
+                    <div class="radio-text">Помесячная оплата</div>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="pay">
+                    <div class="radio-text">Разовая оплата</div>
+                  </label>
+                </div>
+                <div class="calculator_block delivery">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    <div class="checkbox-text">Доставка</div>
+                  </label>
+                  <label>
+                    <input class="number" type="text" disabled name="distance"><span>километров до объекта</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="calculator_bottom">
+              <div class="calculator_price">Выберите тип оплаты
+                <!--span="35 000 Р/мес"-->
+              </div>
+              <div class="calculator_button"><a class="btn_pink" href="#" data-open="popup_order">Заказать</a></div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="advantages">
+        <div class="grid-container">
+          <div class="advantages_heading heading">Наши преимущества</div>
+          <div class="advantages_slider slider-dots">
+            <div class="advantages_item">
+              <div class="advantages_item-img"><img src="../assets/img/ad1.png" alt="" title=""></div>
+              <div class="advantages_item-content">Наша фирма занимается арендой бытовок с 2008 года, поэтому мы знаем что нужно нашему клиенту!</div>
+            </div>
+            <div class="advantages_item">
+              <div class="advantages_item-img"><img src="../assets/img/ad2.png" alt="" title=""></div>
+              <div class="advantages_item-content">
+                Оплату за аренду
+                и доставку бытовки
+                можно производить
+                по безналичному
+                и наличному расчету.
+              </div>
+            </div>
+            <div class="advantages_item">
+              <div class="advantages_item-img"><img src="../assets/img/ad3.png" alt="" title=""></div>
+              <div class="advantages_item-content">Для постоянных клиентов у нас действует гибкая система скидок как по аренде бытовки так и по доставке и вывоза её на склад.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main_photogallery">
+        <div class="grid-container">
+          <div class="main_photogallery-heading heading">Фотогалерея</div>
+          <div class="main_photogallery-slider slider-arrows slider-dots">
+            <div class="main_photogallery-item"><a data-fancybox="gallery" href="../assets/img/gallery.jpg" data-caption="Фото 1" title=""><img src="../assets/img/gallery.jpg" alt="" title=""></a></div>
+            <div class="main_photogallery-item"><a data-fancybox="gallery" href="../assets/img/gallery.jpg" data-caption="Фото 1" title=""><img src="../assets/img/gallery.jpg" alt="" title=""></a></div>
+            <div class="main_photogallery-item"><a data-fancybox="gallery" href="../assets/img/gallery.jpg" data-caption="Фото 1" title=""><img src="../assets/img/gallery.jpg" alt="" title=""></a></div>
+            <div class="main_photogallery-item"><a data-fancybox="gallery" href="../assets/img/gallery.jpg" data-caption="Фото 1" title=""><img src="../assets/img/gallery.jpg" alt="" title=""></a></div>
+            <div class="main_photogallery-item"><a data-fancybox="gallery" href="../assets/img/gallery.jpg" data-caption="Фото 1" title=""><img src="../assets/img/gallery.jpg" alt="" title=""></a></div>
+            <div class="main_photogallery-item"><a data-fancybox="gallery" href="../assets/img/gallery.jpg" data-caption="Фото 1" title=""><img src="../assets/img/gallery.jpg" alt="" title=""></a></div>
+            <div class="main_photogallery-item"><a data-fancybox="gallery" href="../assets/img/gallery.jpg" data-caption="Фото 1" title=""><img src="../assets/img/gallery.jpg" alt="" title=""></a></div>
+            <div class="main_photogallery-item"><a data-fancybox="gallery" href="../assets/img/gallery.jpg" data-caption="Фото 1" title=""><img src="../assets/img/gallery.jpg" alt="" title=""></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="price">
+        <div class="grid-container">
+          <div class="price_heading">
+            <div class="heading">Цены на аренду блок-контейнеров</div>
+            <div class="link-more"><a href="/price.php">Перейти в раздел</a></div>
+          </div>
+          <div class="price_wrapper">
+            <div class="price_item">
+              <div class="price_img"><a data-fancybox="price" href="../assets/img/price.jpg" title=""><img src="../assets/img/price.jpg" alt="" title=""><a class="lupa" data-fancybox="price" href="../assets/img/price.jpg"></a></a></div>
+              <div class="price_content">
+                <div class="price_description">
+                  <div class="price_title"> Блок контейнер 2,5 х 6 м</div>
+                  <div class="price_text">
+                    <div><span>Наружная обшивка: </span>металлический каркас оцинкованный профнастил С-8</div>
+                    <div><span>Внутренняя отделка: </span>ДВП утепление 50 мм электрика</div>
+                  </div>
+                </div>
+                <div class="price_summ"><span>7000</span>Р/мес</div>
+              </div>
+            </div>
+            <div class="price_item">
+              <div class="price_img"><a data-fancybox="price" href="../assets/img/price.jpg" title=""><img src="../assets/img/price.jpg" alt="" title=""><a class="lupa" data-fancybox="price" href="../assets/img/price.jpg"></a></a></div>
+              <div class="price_content">
+                <div class="price_description">
+                  <div class="price_title"> Блок контейнер 2,5 х 6 м</div>
+                  <div class="price_text">
+                    <div><span>Наружная обшивка: </span>металлический каркас оцинкованный профнастил С-8</div>
+                    <div><span>Внутренняя отделка: </span>пластик, деревянная вагонка утепление 50 мм электрика</div>
+                  </div>
+                </div>
+                <div class="price_summ"><span>7000</span>Р/мес</div>
+              </div>
+            </div>
+            <div class="price_item">
+              <div class="price_img"><a data-fancybox="price" href="../assets/img/price.jpg" title=""><img src="../assets/img/price.jpg" alt="" title=""><a class="lupa" data-fancybox="price" href="../assets/img/price.jpg"></a></a></div>
+              <div class="price_content">
+                <div class="price_description">
+                  <div class="price_title">Бытовка склад 2400 x 6000 см</div>
+                  <div class="price_text">
+                    <div><span>Наружная обшивка: </span>Металлический каркас Наружная обшивка оцинкованный профнастил</div>
+                    <div><span>Внутренняя отделка: </span>Стенды ДВП, Электропроводка Освещение Выключатели  Металлическая дверь На выходе автомат 16А Стальные решетки на окнах</div>
+                  </div>
+                </div>
+                <div class="price_summ"><span>6000</span>Р/мес</div>
+              </div>
+            </div>
+            <div class="price_item">
+              <div class="price_img"><a data-fancybox="price" href="../assets/img/price.jpg" title=""><img src="../assets/img/price.jpg" alt="" title=""><a class="lupa" data-fancybox="price" href="../assets/img/price.jpg"></a></a></div>
+              <div class="price_content">
+                <div class="price_description">
+                  <div class="price_title">Бытовка-офис 2400 x 6000см</div>
+                  <div class="price_text">
+                    <div><span>Наружная обшивка: </span>Металлический каркас Наружная обшивка оцинкованный профнастил Стенды ДВП Электропроводка Розетки</div>
+                    <div><span>Внутренняя отделка: </span>Освещение Выключатели На выходе автомат 16А</div>
+                  </div>
+                </div>
+                <div class="price_summ"><span>7000</span>Р/мес</div>
+              </div>
+            </div>
+            <div class="price_item">
+              <div class="price_img"><a data-fancybox="price" href="../assets/img/price.jpg" title=""><img src="../assets/img/price.jpg" alt="" title=""><a class="lupa" data-fancybox="price" href="../assets/img/price.jpg"></a></a></div>
+              <div class="price_content">
+                <div class="price_description">
+                  <div class="price_title"> Блок контейнер 2,5 х 6 м</div>
+                  <div class="price_text">
+                    <div><span>Наружная обшивка: </span>металлический каркас оцинкованный профнастил С-8</div>
+                    <div><span>Внутренняя отделка: </span>ДВП утепление 50 мм электрика</div>
+                  </div>
+                </div>
+                <div class="price_summ"><span>7000</span>Р/мес</div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-x">
+            <div class="price_link"><span class="btn_blue">Показать еще</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-container content">
+        <div class="seo_text">
+          <h1>Сео-текст</h1>
+          <p>Компания «Бытовки-Сервис» (Москва) предлагает взять в аренду блок контейнеры и вагончики недорого. Мы гарантируем клиентам выгодные условия сотрудничества и самостоятельно доставляем бытовки до строительных объектов.</p>
+          <p>Аренда блок контейнера – это возможность получить качественное временное жилье, не тратясь на его приобретение. Арендовать такое сооружение можно гораздо дешевле, чем купить. К тому же наниматель не тратится на монтаж и демонтаж бытовки: все работы выполняют специалисты нашей компании.</p>
+          <p>Преимущества сотрудничества с ООО «Бытовки-Сервис»</p>
+          <ul>Аренда бытовок – оптимальный вариант для многих организаций. Каждому клиенту гарантированы следующие преимущества:
+            <li>возможность арендовать вагончик любого типа, как утепленный, так и металлический, с разными вариантами отделки и оборудования;</li>
+            <li>индивидуальный подход к заказу: учитываются все пожелания клиентов, подбирается наиболее оптимальный вариант сотрудничества для каждого;</li>
+            <li>выгодные цены на услуги;</li>
+            <li>оперативная доставка сооружений на объект;</li>
+            <li>Бытовка арендуется без залога, по договору.</li>
+          </ul>
+          <ul>Мы предлагаем различные виды бытовок:
+            <li>для складов: с решетками на окнах, внутренней отделкой, металлической дверью;</li>
+            <li>для офисных помещений: с окнами, дверями, подведенными инженерными коммуникациями, отделкой;</li>
+            <li>для торговых точек: с выходами, к которым подключается торговое оборудование, с коммуникациями;</li>
+            <li>для проживания: с системой сигнализации, мебелью, отделкой и различными удобствами;</li>
+            <li>для охранных постов со всем необходимым оснащением и мебелью.</li>
+          </ul>
+          <p>Аренда бытовки может осуществляться на любой срок по желанию клиента. Все обязательства прописываются в договоре, действие которого можно продлить. Для постоянных клиентов действуют специальные предложения.</p>
+          <p>Звоните по телефонам: <span class="tel">+7 (495) 789-55-63</span>,<span class="tel">+7 (495) 641-85-68 </span>, и наши консультанты подберут для вас наиболее выгодные условия сотрудничества.</p>
+        </div>
+      </div>
+      <div class="delivery_calculator">
+        <div class="grid-container">
+          <div class="delivery_calculator-top">
+            <div class="delivery_calculator-heading">Расчет стоимости доставки</div>
+            <div class="grid-x">
+              <div class="delivery_calculator-wrap">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <div class="checkbox-text">Растояние от склада более 50 км</div>
+                </label>
+              </div>
+              <div class="delivery_calculator-wrap">
+                <label>Введите расстояние, км:
+                  <input class="number" type="text" required disabled>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="grid-x delivery_calculator-bottom">
+            <div class="delivery_calculator-price">Цена: <span>6500</span></div>
+            <div class="delivery_calculator-button"><a class="btn_pink" href="#" data-open="popup_order">Заказать</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="often-question">
+        <div class="grid-container">
+          <div class="often-question heading">Часто задаваемые вопросы</div>
+          <div class="often-question-wrapper">
+            <div class="often-question-item">
+              <div class="often-question-ask">Сколько времени занимает доставка?</div>
+              <div class="often-question-answer">Бытовку Вы получаете в день составления договора и оплаты заказа</div>
+            </div>
+            <div class="often-question-item">
+              <div class="often-question-ask">Возможно ли доукомплектовывать бытовку?</div>
+              <div class="often-question-answer">Да, мы предоставляем разнообразный выбор комплектации на Ваш выбор. Вся возможная комплектация доступна на сайте или Вы можете получить консультацию у нашего менеджера.</div>
+            </div>
+            <div class="often-question-item">
+              <div class="often-question-ask">Возможна ли аренда бу бытовки без залога?</div>
+              <div class="often-question-answer">Да, вариант аренды без залога возможен при условии аванса за 3 месяца. </div>
+            </div>
+            <div class="often-question-item">
+              <div class="often-question-ask">Как мне вернуть бытовку по истечении срока аренды?</div>
+              <div class="often-question-answer">При приблежении окончания срока аренды, наши менеджеры сами свяжутся с Вами, для обсуждения процесса возврата удобным для Вас способом.</div>
+            </div>
+            <div class="often-question-item">
+              <div class="often-question-ask">Есть ли у Вас бытовки для проживания зимой?</div>
+              <div class="often-question-answer">Да, наша компания предлагает бытовки, которые утеплены 100мм слоем утеплителя, на полу настелен линолеум, в них будет комфортно до -15 градусов. Так же возможна комплектация дополнительным электрооборудованием.</div>
+            </div>
+            <div class="often-question-item">
+              <div class="often-question-ask">Какие дополнительные расходы могут возникнуть при аренде вагончика?</div>
+              <div class="often-question-answer">Кроме оплаты аренды Вам необходимо оплатить доставку, если у вас нет собственного транспорта.</div>
+            </div>
+            <div class="often-question-item">
+              <div class="often-question-ask">Нужен ли фундамент для установки или можно ставить на грунт?</div>
+              <div class="often-question-answer">Мы рекомендуем устанавливать бытовку на фундаменте или на бетонных блоках. Однако, можно установить на ровную заасфальтированную площадку. </div>
+            </div>
+            <div class="often-question-item">
+              <div class="often-question-ask">Можно ли выкупить арендованную бытовку? </div>
+              <div class="often-question-answer">Вопрос покупки обговаривается индивидуально.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order_form-block">
+        <div class="grid-container">
+          <div class="order_form-heading">У нас Вы можете быстро оформить заказ бытовки</div>
+          <form class="order_form" action="" method="">
+            <div class="order_form-group">
+              <label>
+                <input type="text" name="name">
+                <div class="placeholder-input">Ваше имя</div>
+              </label>
+              <label>
+                <input type="tel" name="phone" required>
+                <div class="placeholder-input">Ваш телефон<span>*</span></div>
+              </label>
+              <label>
+                <input type="text" name="message">
+                <div class="placeholder-input">Ваше сообщение</div>
+              </label>
+            </div>
+            <div class="order_form-personal">
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="personal-text checkbox-text">Даю согласие на обработку персональных данных.  <a href="/obrabotka-personalnyh-dannyh/"> Узнать подробности</a></div>
+              </label>
+            </div>
+            <button class="btn_pink">Заказать<span class="show-for-mobile"> бытовку</span></button>
+          </form>
+        </div>
+      </div>
+      <div class="main_article">
+        <div class="grid-container">
+          <div class="main_article-heading heading">Так же Вам могут быть полезны  <a href="#">  наши статьи</a><a class="mobile-more" href="#"></a></div>
+          <div class="main_article-wrapper"><a class="main_article-item" href="/pokupka-ili-arenda-byitovok/">Покупать или арендовать?</a><a class="main_article-item" href="/xarakteristiki-byitovok/">Характеристики бытовок</a><a class="main_article-item" href="/naznachenie-byitovok/">Назначение бытовок</a><a class="main_article-item" href="/ispolzovanie-krana-manipulyatora/">Использование крана-манипулятора</a><a class="main_article-item" href="/kupit-byitovku-bu/">Купить бытовку бу</a><a class="main_article-item" href="/byitovka-sklad/">Бытовка склад</a><a class="main_article-item" href="/bytovka-prorabskaya-ofis/">Бытовка прорабская(офис)</a><a class="main_article-item" href="/byitovka-zhilaya/">Бытовка жилая</a><a class="main_article-item" href="/byitovka-stolovaya/">Бытовка столовая</a><a class="main_article-item" href="/byitovka-razdevalka/">Бытовка раздевалка</a><a class="main_article-item" href="/bytovka-post-oxrany/">Бытовка пост-охраны</a></div>
+        </div>
+      </div>
+    </main>
+    <footer class="site_footer">
+      <div class="footer_top">
+        <div class="grid-container">
+          <div class="grid-x">
+            <div class="footer_nav">
+              <div class="footer_logo"><a href="/">Бытовки-Сервис.ru</a></div>
+              <ul class="footer_menu">
+                <li><a href="/">Аренда бытовки</a></li>
+                <li><a href="/price.php">Цены</a></li>
+                <li><a href="/delivery.php">Доставка</a></li>
+                <li><a href="/photogallery.php">Фотогалерея</a></li>
+                <li><a href="/kontakts.php">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="footer_links">
+              <div class="footer_phones"><a class="phone" href="tel:+74957985563">+7 (495) 798-55-63</a><a class="phone" href="tel:+74956418568">+7 (495) 641-85-68</a></div><a class="callback" href="#">Обратный звонок</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <div class="grid-container">
+          <div class="grid-x">
+            <div class="footer_copyright"><span>2005-2018 © ООО «Бытовки-Сервис»</span><a class="politics" href="#">Обработка персональных данных</a></div>
+            <div class="footer_info">
+              <div class="footer_address"><i class="icon-address"></i>ул. Молодогвардейская, д. 58, стр.13, офис 28.<br>Мы работаем: Пн - Пт с 9:00 до 18:00</div>
+              <div class="footer_mail"><a class="mail" href="mailto:5084145@mail.ru"><i class="icon-mail"></i>5084145@mail.ru</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/assets/js/foundation.min.js"></script>
+    <script src="/assets/js/slick.min.js"></script>
+    <script src="/assets/js/jquery.fancybox.min.js"></script>
+    <script src="/assets/js/jquery.mask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script async src="/assets/js/main.js"></script>
+    <div class="popup_form order_popup reveal" id="popup_order" data-reveal>
+      <button class="close-modal" data-close aria-label="Close modal" type="button"></button>
+      <form action="" method="">
+        <div class="heading">Заказ бытовок</div>
+        <div class="order_form-group">
+          <label>
+            <input type="text">
+            <div class="placeholder-input">Ваше имя</div>
+          </label>
+          <label>
+            <input type="tel" required>
+            <div class="placeholder-input">Ваш телефон<span>*</span></div>
+            <div class="error-message">Пожалуйста, введите корректный номер телефона</div>
+          </label>
+          <label>
+            <textarea></textarea>
+            <div class="placeholder-input">Комментарий</div>
+          </label>
+        </div>
+        <div class="order_form-personal">
+          <label class="checkbox">
+            <input type="checkbox" required>
+            <div class="personal-text checkbox-text">Даю согласие на обработку персональных данных.  <a href="/obrabotka-personalnyh-dannyh/"> Узнать подробности</a></div>
+          </label>
+        </div>
+        <button class="to-order btn_pink">Заказать</button>
+      </form>
+    </div>
+  </body>
 </html>
