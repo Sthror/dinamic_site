@@ -17,7 +17,7 @@
       <div class="grid-container">
         <div class="grid-x">
           <div class="header_address"><i class="icon-address"></i>ул. Молодогвардейская, д. 58, стр.13, офис 28.
-            Мы работаем: Пн - Пт с 9:00 до 18:00
+            Мы работаем: Пн - Пт с 10:00 до 19:00
           </div>
           <div class="header_contacts"><a class="mail" href="mailto:5084145@mail.ru"><i class="icon-mail"></i>5084145@mail.ru</a>
             <div class="header_phones"><a class="phone" href="tel:+74957985563">+7 (495) 798-55-63</a><a class="phone" href="tel:+74956418568">+7 (495) 641-85-68</a></div>
@@ -34,7 +34,7 @@
             </a></div>
           <div class="header_menu">
             <ul class="menu">
-              <li><a href="/catalog.php">Аренда бытовки</a>
+              <li><a href="/catalog.php">Аренда бытовок</a>
                 <ul class="submenu">
                   <li><a href="/catalog.php">Аренда бытовок в Видном</a></li>
                   <li><a href="/catalog.php">Аренда бытовок в Домодедово</a></li>
@@ -92,7 +92,7 @@
     </div>
     <div class="dropdown_menu">
       <ul class="menu">
-        <li class="parent"><a href="/czenyi/">Аренда бытовки</a>
+        <li class="parent"><a href="/catalog.php">Аренда бытовок</a>
           <ul class="submenu">
             <li><a href="/catalog.php">Аренда бытовок в Видном</a></li>
             <li><a href="/catalog.php">Аренда бытовок в Домодедово</a></li>
@@ -314,7 +314,7 @@
         <div class="grid-x">
           <div class="footer_copyright"><span>2005-2018 © ООО «Бытовки-Сервис»</span><a class="politics" href="#">Обработка персональных данных</a></div>
           <div class="footer_info">
-            <div class="footer_address"><i class="icon-address"></i>ул. Молодогвардейская, д. 58, стр.13, офис 28.<br>Мы работаем: Пн - Пт с 9:00 до 18:00</div>
+            <div class="footer_address"><i class="icon-address"></i>ул. Молодогвардейская, д. 58, стр.13, офис 28.<br>Мы работаем: Пн - Пт с 10:00 до 19:00</div>
             <div class="footer_mail"><a class="mail" href="mailto:5084145@mail.ru"><i class="icon-mail"></i>5084145@mail.ru</a></div>
           </div>
         </div>
