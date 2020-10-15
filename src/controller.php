@@ -5,6 +5,8 @@ if($_SERVER['SCRIPT_NAME'] == '/index.php'){ // получаем запрос н
     printPage('/bytovka.php', $database);
 } elseif($_SERVER['SCRIPT_NAME'] == '/catalog.php'){
     printPage('/catalog.php', $database);
+} elseif($_SERVER['SCRIPT_NAME'] == '/contacts.php'){
+    printPage('/contacts.php', $database);
 }
 
 function  printPage($url_key, &$database){ // определяем функцию запроса шаблона
