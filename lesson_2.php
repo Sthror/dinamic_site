@@ -199,10 +199,10 @@ function hackOneSimbol($pass)
 2a. Воспроизвести весь код из ролика Изучение PHP для начинающих | Урок #14 - Функции и написать пояснения к каждой строчке кода.
 */
 
-function printWords($word, $x, $y)
+function printWords($x, $y)
 { // функция вывода на экран
 	$word = math($x, $y); //вызов функции сложения
-	echo $word; // выводим на экран
+	echo "$word<br>"; // выводим на экран
 }
 
 function math($first, $second)
@@ -213,7 +213,7 @@ function math($first, $second)
 $x = 12; //параметр 1
 $y = 35; // параметр 2
 
-printWords($sum, $x, $y); // выводим на экран результат сложения
+printWords($x, $y); // выводим на экран результат сложения
 
 
 
@@ -238,7 +238,7 @@ foreach ($arr as $klient => $value) {
 	$debet[$klient] = $sum;
 	unset($sum);
 }
-asort($debet);
+arsort($debet);
 foreach ($debet as $name => $value) {
 	echo "$name имеет $value<br>";
 }
@@ -254,24 +254,18 @@ $range = [1,50];
 searchSimpleNumbers($range);
 function searchSimpleNumbers($range)
 {
-	$end =  $range[1]; //до какого числа искать
-	$start =  $range[0]; //до какого числа искать
-	$arSimpleNubers = array(); //начальное массив с простыми числами
-	for ($i = $start; $i <= $end; $i++) { // перебираем число от 4 до n
-		$control = 0; //это контрольная переменная если ниже не изменится, то будет добавлено простое число в начальный массив простых чисел
-		for ($int = 1; $int < count($arSimpleNubers); $int++) { // перебираем все простые числа в нашем массиве простых чисел
-			if ($arSimpleNubers[$int] !== $i && $i % $arSimpleNubers[$int] == 0) { // получаем модальное деление числа на все имеющеюся простые чила
-				$control = 1; //переменная изменена, это не простое число
-				$arNotSimpleNubers[] = $i;
-				continue;
+	$end =  $range[1]; //до какого числа искать		
+	$arSimpleNubers = array(2,); //начальный массив с простыми числами
+	for ($i = 3; $i <= $end; $i++) { // перебираем число от 4 до n		
+		for ($int = 0; $int < count($arSimpleNubers); $int++) { // перебираем все простые числа в нашем массиве простых чисел
+			if ($arSimpleNubers[$int] !== $i && $i % $arSimpleNubers[$int] == 0) { // получаем модальное деление числа на все имеющеюся простые чиcла				
+				$arNotSimpleNubers[] = $i;				
+				continue(2);
+			} else if ($arSimpleNubers[$int]**2 > $i) { // не имеет смысла делить по модулю на простое число, которое больше квадратного корня от проверяемого значения $i
+				$arSimpleNubers[] = $i;	//получили простое число, добавляем в массив
+				continue(2);
 			}
-			if ($arSimpleNubers[$int] * $arSimpleNubers[$int] > $i) { // не имеет смысла делить по модулю на простое число, которое больше квадратного корня от проверяемого значения $i
-				continue;
-			}
-		}
-		if ($control == 0) {
-			$arSimpleNubers[] = $i;	//получили простое число, добавляем в массив
-		}
+		}		
 	}
 	?><pre><?php print_r($arSimpleNubers);?></pre><pre><?php print_r($arNotSimpleNubers);?></pre><?php
 }
@@ -283,9 +277,9 @@ function searchSimpleNumbers($range)
 3a. Сделать настройки вашего php которые позволят выводить на экран ошибки уровня notice и deprecated.
 */
 
-error_reporting(E_NOTICE | E_DEPRECATED);
-error_reporting(-1);
-ini_set('display_errors', 'On');
+//error_reporting(E_NOTICE | E_DEPRECATED);
+//error_reporting(-1);
+//ini_set('display_errors', 'On');
 
 
 
@@ -293,10 +287,11 @@ ini_set('display_errors', 'On');
 3b. Продемонстрировать результат ошибок всех типов ломая свой скрипт (fatal, error, notice и deprecated).
 */
 
-// require_once("несуществующий файл"); // e_error
+//require_once("несуществующий файл"); // fatal
 $arr = [1,2];
-// $arr[2]; // e_notice
+//echo $arr[2]; // notice
 
-// $a = echo "нет точки с запятой" // e_parse
+//$a = echo "нет точки с запятой" // parse
 
-// ereg() // deprecated
+split('[/.-]', "12/21/2012");
+// deprecated

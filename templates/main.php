@@ -12,6 +12,7 @@ include_once("./templates/blocks/head.php");
   include_once("./templates/blocks/mobile-menu.php");
   ?>
   <main>
+  <p>Внес измненения для ветки dev</p>
     <?php
     include_once("./templates/blocks/slider.php");
     include_once("./templates/blocks/catalog-block.php");
