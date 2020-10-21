@@ -72,7 +72,23 @@
                 ];
             </script>
             <div class="main_map-links">
-                <div class="main_map-links-title">Аренда бытовок в: </div><a href="/arenda-bytovok-v-vidnom/">Видном</a><a href="/arenda-bytovok-v-bronnicah/">Бронницах</a><a href="/arenda-bytovok-v-dmitrove/">Дмитрове</a><a href="/arenda-bytovok-v-ramenskom/">Раменском</a><a href="/arenda-bytovok-v-chekhove/">Чехове</a><a href="/arenda-bytovok-v-sergiev-posade/">Сергиев Посаде</a><a href="/arenda-bytovok-v-klinu/">Клину</a><a href="/arenda-bytovok-v-istre/">Истре</a><a href="/arenda-bytovok-v-podolske/">Подольске</a><a href="/arenda-bytovok-v-vidnom/">Солнечногорске</a><a href="/arenda-bytovok-v-volokolamske/">Волоколамске</a><a href="/arenda-bytovok-v-pushkino/">Пушкино</a><a href="/arenda-bytovok-v-zelenograde/">Зеленограде</a><a href="/arenda-bytovok-v-balashihe/">Балашихе</a><a href="/arenda-bytovok-v-shchelkovo/">Щелково</a><a href="/arenda-bytovok-v-noginske/">Ногинске</a>
+                <div class="main_map-links-title">Аренда бытовок в: </div>
+                <a href="/catalog.php">Видном</a>
+                <a href="/catalog.php">Бронницах</a>
+                <a href="/catalog.php">Дмитрове</a>
+                <a href="/catalog.php">Раменском</a>
+                <a href="/catalog.php">Чехове</a>
+                <a href="/catalog.php">Сергиев Посаде</a>
+                <a href="/catalog.php">Клину</a>
+                <a href="/catalog.php">Истре</a>
+                <a href="/catalog.php">Подольске</a>
+                <a href="/catalog.php">Солнечногорске</a>
+                <a href="/catalog.php">Волоколамске</a>
+                <a href="/catalog.php">Пушкино</a>
+                <a href="/catalog.php">Зеленограде</a>
+                <a href="/catalog.php">Балашихе</a>
+                <a href="/catalog.php">Щелково</a>
+                <a href="/catalog.php">Ногинске</a>
             </div>
         </div>
     </div>

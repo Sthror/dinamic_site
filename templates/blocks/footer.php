@@ -5,7 +5,7 @@
                 <div class="footer_nav">
                     <div class="footer_logo"><a href="/">Бытовки-Сервис.ru</a></div>
                     <ul class="footer_menu">
-                        <li><a href="/">Аренда бытовки</a></li>
+                        <li><a href="/">Аренда бытовок</a></li>
                         <li><a href="/price.php">Цены</a></li>
                         <li><a href="/delivery.php">Доставка</a></li>
                         <li><a href="/photogallery.php">Фотогалерея</a></li>
