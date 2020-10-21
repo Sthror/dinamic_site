@@ -14,5 +14,4 @@ $baseFiles[] = PATH_SRC. 'controller.php'; // этот файл будет ре�
 foreach($baseFiles as $value){
     include_once($value);
 }
-
 ?>
